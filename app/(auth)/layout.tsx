@@ -20,13 +20,34 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider
-    //   appearance={{
-    //     baseTheme: dark,
-    //   }}
+      // appearance={{
+      //   baseTheme: dark,
+      // }}
     >
       <html lang='en'>
-        <body className={`${inter.className} bg-dark-1`}>{children}</body>
+        <body className={`${inter.className} bg-dark-1 flex justify-center items-center min-h-screen`}>{children}</body>
       </html>
     </ClerkProvider>
   );
 }
+
+/*
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={`${inter.className} bg-dark-1 flex justify-center items-center min-h-screen`}
+        >
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
+  );
+}
+
+*/
